@@ -6,6 +6,16 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
+import ImageParagraphBlock from "@modules/layout/components/par-block"
+import firstParImg from "../../../assets/imgs/home/paragraphs/Par_1/img.webp"
+import secondParImg from "../../../assets/imgs/home/paragraphs/Par_2/img.webp"
+
+const longSecondPar = `
+Our creative process honors both tradition and innovation, resulting in timeless, handcrafted jewelry. Each piece begins as a concept, born from the delicate balance between nature's imperfections and human artistry. ${"\n"}
+Hand-forging every element with unparalleled precision and care, we use the finest metals, allowing each piece to develop its own unique character through time-honored techniques.${"\n"} ${"\n"}
+We also believe that a piece of jewelry is not just an accessory but a powerful symbol, transcending labels and embracing individuality. Our designs are minimalist and elegant, focusing on clean lines and refined simplicity. Each piece is crafted to resonate with anyone who wears it, regardless of gender, celebrating personal expression and unique experiences.
+Kizu oreficians tries to forge a wearable work of art, designed to be lived, worn, and passed down through generations, embodying the essence of ageless beauty and personal meaning.
+`
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -67,13 +77,38 @@ export default async function Home({
   }
 
   return (
-    <>
+    <div className="dark:bg-black bg-white">
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
-    </>
+      <ImageParagraphBlock
+        my="lg"
+        className="mb-48"
+        title="What Kizu mens?"
+        titleSize="h2"
+        titleCss="text-4xl mb-24 dark:text-white"
+        imgPath={firstParImg}
+        imgAlt="Ethernal ring"
+        imgPosition="dx"
+        paragraph="In Japanese, Kizu means a scratch, a subtle mark that tells a story of time, use, and cherished memories. Our creations, forged by hand, embrace this philosophy, celebrating the beauty in imperfection. Each piece is a testament to the skilled craftsmanship that intertwines modern design with traditional artistry. As the metal of our jewelry may bear the delicate traces of life's journey, the significance and emotions they hold will forever remain untarnished. We create more than jewelry; we craft enduring symbols of your unique experiences and timeless elegance. Every scratch adds character, every moment adds meaning, and together they form the narrative of a life well-lived."
+        paragraphWrapperCss="md:w-2/5 mb-12"
+        paragraphCss="text-lg font-now text-justify md:text-start dark:text-white"
+      />
+
+      <ImageParagraphBlock
+        title="Our process"
+        titleSize="h3"
+        titleCss="text-4xl mb-24 dark:text-white"
+        imgPath={secondParImg}
+        imgAlt="H ring"
+        imgPosition="sx"
+        paragraph={longSecondPar}
+        paragraphWrapperCss="md:w-2/5 mb-12 pe-12 font-now"
+        paragraphCss="text-lg text-justify md:text-start dark:text-white"
+      />
+    </div>
   )
 }

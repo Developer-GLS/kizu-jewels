@@ -1,0 +1,87 @@
+import { Text, Heading, clx } from "@medusajs/ui"
+import Image, { StaticImageData } from "next/image"
+
+type ImageParagraphBlockProps = {
+  className?: string
+  my?: "sm" | "md" | "lg"
+  title?: string
+  titleSize?: "h1" | "h2" | "h3"
+  titleCss?: string
+  imgPath: StaticImageData
+  imgAlt: string
+  imgPosition?: "sx" | "dx"
+  paragraph: string
+  paragraphWrapperCss?: string
+  paragraphCss?: string
+}
+
+const ImageParagraphBlock = ({
+  className,
+  my,
+  title,
+  titleSize,
+  titleCss,
+  imgPath,
+  imgAlt,
+  imgPosition,
+  paragraph,
+  paragraphWrapperCss,
+  paragraphCss,
+}: ImageParagraphBlockProps) => {
+  return (
+    <div className="wrapper">
+      <Heading
+        className={clx("font-tostada text-center", titleCss)}
+        level={titleSize}
+      >
+        {title}
+      </Heading>
+      <div
+        className={clx(
+          "flex mx-12 justify-center md:justify-between flex-wrap",
+          {
+            "my-4": my === "sm",
+            "my-8": my === "md",
+            "my-12": my === "lg",
+          },
+          className
+        )}
+      >
+        <div
+          className={clx("img-wrapper h-100 grow", {
+            "order-1": imgPosition === "sx",
+            "order-2": imgPosition === "dx",
+          })}
+        >
+          <Image     className={clx("w-full max-w-2xl", {
+            "mr-auto": imgPosition === "sx",
+            "ml-auto": imgPosition === "dx",
+          })}src={imgPath} alt={imgAlt}></Image>
+        </div>
+
+        <div
+          className={clx("paragraph-wrapper",
+            {
+              "ps-12 order-2": imgPosition === "sx",
+              "pe-12 order-1": imgPosition === "dx",
+            },
+
+            paragraphWrapperCss
+          )}
+        >
+          <Text
+            className={clx(
+              "",
+
+              paragraphCss
+            )}
+          >
+            {paragraph}
+          </Text>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ImageParagraphBlock
