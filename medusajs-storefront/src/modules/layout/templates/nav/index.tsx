@@ -5,6 +5,7 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import DarkMode from "@modules/layout/components/dark-mode"
 import { User, ShoppingBag } from "@medusajs/icons"
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -127,6 +128,7 @@ l54 55 -98 0 -98 0 30 -34z"
             >
               <CartButton />
             </Suspense>
+            <DarkMode />
           </div>
         </nav>
       </header>
