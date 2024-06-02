@@ -9,6 +9,7 @@ module.exports = {
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       transitionProperty: {
@@ -68,6 +69,8 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        tostada: ["Tostada", "sans-serif"],
+        now: ["Now", "serif"]
       },
       keyframes: {
         ring: {

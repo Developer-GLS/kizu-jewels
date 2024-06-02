@@ -2,6 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "Tostada";
+  src: url("../assets/fonts/tostada/TOSTADA.ttf");
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("../assets/fonts/now/Now-Light.otf");
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -109,4 +119,15 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+}
+
+.hero-container {
+  height: calc(75vh + 145px);
+  background: url('../assets/imgs/home/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-wrapper {
+  background: wheat;
 }
