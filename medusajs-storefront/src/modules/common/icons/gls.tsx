@@ -10,7 +10,7 @@ const Gls: React.FC<IconProps> = ({
   return (
     <svg xmlns="http://www.w3.org/2000/svg" 
      version="1.1" id="Layer_1" x="0px" y="0px" 
-     width="18" height="auto" viewBox="0 0 504 600" enable-background="new 0 0 504 600" 
+     width="18" height="auto" viewBox="0 0 504 600"
      fill="none"
      {...attributes}
      >

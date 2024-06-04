@@ -1,44 +1,43 @@
 import { Text, Heading, clx } from "@medusajs/ui"
-import Image, { StaticImageData } from "next/image"
 
-type ImageParagraphBlockProps = {
+type TypoParagraphBlockProps = {
   className?: string
   my?: "sm" | "md" | "lg"
   title?: string
   titleSize?: "h1" | "h2" | "h3"
   titleCss?: string
-  imgPath: StaticImageData
-  imgAlt: string
-  imgPosition?: "sx" | "dx"
+  fatText?: string
+  fatTextPosition?: "sx" | "dx"
+  fatTextCss?: string
   paragraph: string
   paragraphWrapperCss?: string
   paragraphCss?: string
 }
 
-const ImageParagraphBlock = ({
+const TypoParagraphBlock = ({
   className,
   my,
   title,
   titleSize,
   titleCss,
-  imgPath,
-  imgAlt,
-  imgPosition,
+  fatText,
+  fatTextPosition,
+  fatTextCss,
   paragraph,
   paragraphWrapperCss,
   paragraphCss,
-}: ImageParagraphBlockProps) => {
+}: TypoParagraphBlockProps) => {
   return (
     <div className="wrapper">
       <Heading
-        className={clx("font-tostada text-center", titleCss)}
+        className={clx("font-now text-center", titleCss)}
         level={titleSize}
       >
         {title}
       </Heading>
       <div
         className={clx(
-          "flex mx-12 justify-center md:justify-between flex-wrap",
+          "flex mx-12 justify-center md:justify-between flex-wrap lg:flex-nowrap",
           {
             "my-4": my === "sm",
             "my-8": my === "md",
@@ -48,22 +47,24 @@ const ImageParagraphBlock = ({
         )}
       >
         <div
-          className={clx("img-wrapper h-100 grow", {
-            "order-1": imgPosition === "sx",
-            "order-2": imgPosition === "dx",
+          className={clx("typo-text-wrapper h-100 grow", {
+            "order-1": fatTextPosition === "sx",
+            "order-2": fatTextPosition === "dx",
           })}
         >
-          <Image     className={clx("w-full max-w-2xl", {
-            "mr-auto": imgPosition === "sx",
-            "ml-auto": imgPosition === "dx",
-          })}src={imgPath} alt={imgAlt}></Image>
+          <Text className={clx("w-full max-w-2xl font-tostada", {
+            "mr-auto": fatTextPosition === "sx",
+            "ml-auto": fatTextPosition === "dx",
+          },fatTextCss)}
+          
+          >{fatText}</Text>
         </div>
 
         <div
           className={clx("paragraph-wrapper",
             {
-              "md:ps-12 order-2": imgPosition === "sx",
-              "md:pe-12 order-1": imgPosition === "dx",
+              "md:ps-12 order-2": fatTextPosition === "sx",
+              "md:pe-12 order-1": fatTextPosition === "dx",
             },
 
             paragraphWrapperCss
@@ -84,4 +85,4 @@ const ImageParagraphBlock = ({
   )
 }
 
-export default ImageParagraphBlock
+export default TypoParagraphBlock

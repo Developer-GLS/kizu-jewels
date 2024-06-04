@@ -12,8 +12,8 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full dark:bg-black">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
+        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40 flex-wrap">
+          <div className="w-full md:w-1/3">
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
@@ -26,6 +26,7 @@ export default async function Footer() {
                   height="80"
                   viewBox="0 0 250.000000 250.000000"
                   preserveAspectRatio="xMidYMid meet"
+                  className="mx-auto md:ms-8"
                 >
                   <g
                     transform="translate(0.000000,250.000000) scale(0.100000,-0.100000)"
@@ -96,6 +97,7 @@ l54 55 -98 0 -98 0 30 -34z"
                   height="80"
                   viewBox="0 0 250.000000 250.000000"
                   preserveAspectRatio="xMidYMid meet"
+                  className="mx-auto md:ms-8"
                 >
                   <g
                     transform="translate(0.000000,250.000000) scale(0.100000,-0.100000)"
@@ -160,7 +162,7 @@ l54 55 -98 0 -98 0 30 -34z"
               </div>
             </LocalizedClientLink>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+          <div className="w-full md:w-2/3 text-small-regular gap-10 md:gap-x-16 grid grid-cols-1 sm:grid-cols-2">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
@@ -242,8 +244,8 @@ l54 55 -98 0 -98 0 30 -34z"
             )}
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
+        <div className="flex w-full mb-16 justify-center md:justify-between text-ui-fg-muted flex-wrap">
+          <Text className="txt-compact-small w-full md:w-auto text-center md:text-start mb-8 md:mb-0">
             © {new Date().getFullYear()} Kizu Jewlery. All rights reserved.
           </Text>
           <GlsCta />

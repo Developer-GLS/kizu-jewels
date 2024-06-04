@@ -12,7 +12,7 @@ const DarkMode = () => {
         document.body.classList.toggle("dark");
     }
     return (
-        <div className="dark:bg-black flex items-center rounded-full border">
+        <div className="flex items-center">
         <button className="p-2"  onClick={()=> darkModeHandler()}>
             {
                 

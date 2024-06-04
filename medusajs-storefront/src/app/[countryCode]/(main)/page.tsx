@@ -7,8 +7,17 @@ import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 import ImageParagraphBlock from "@modules/layout/components/par-block"
+import TypoParagraphBlock from "@modules/layout/components/typo-par-block"
 import firstParImg from "../../../assets/imgs/home/paragraphs/Par_1/img.webp"
 import secondParImg from "../../../assets/imgs/home/paragraphs/Par_2/img.webp"
+
+const fatTextValue = `What "Kizu" means?`
+
+const longFirstPat = `
+In Japanese, Kizu means a scratch, a subtle mark that tells a story of time, use, and cherished memories. Our creations, forged by hand, embrace this philosophy, 
+celebrating the beauty in imperfection. Each piece is a testament to the skilled craftsmanship that intertwines modern design with traditional artistry. 
+As the metal of our jewelry may bear the delicate traces of life's journey, the significance and emotions they hold will forever remain untarnished. 
+We create more than jewelry; we craft enduring symbols of your unique experiences and timeless elegance. Every scratch adds character, every moment adds meaning, and together they form the narrative of a life well-lived.`
 
 const longSecondPar = `
 Our creative process honors both tradition and innovation, resulting in timeless, handcrafted jewelry. Each piece begins as a concept, born from the delicate balance between nature's imperfections and human artistry. ${"\n"}
@@ -18,9 +27,8 @@ Kizu oreficians tries to forge a wearable work of art, designed to be lived, wor
 `
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
-  description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+  title: "GreenLeafStudio Jewlery Template",
+  description: "A frontend ecommerce template developed by GreenLeafStudio",
 }
 
 const getCollectionsWithProducts = cache(
@@ -84,19 +92,17 @@ export default async function Home({
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
-      <ImageParagraphBlock
-        my="lg"
-        className="mb-48"
-        title="What Kizu mens?"
-        titleSize="h2"
-        titleCss="text-4xl mb-24 dark:text-white"
-        imgPath={firstParImg}
-        imgAlt="Ethernal ring"
-        imgPosition="dx"
-        paragraph="In Japanese, Kizu means a scratch, a subtle mark that tells a story of time, use, and cherished memories. Our creations, forged by hand, embrace this philosophy, celebrating the beauty in imperfection. Each piece is a testament to the skilled craftsmanship that intertwines modern design with traditional artistry. As the metal of our jewelry may bear the delicate traces of life's journey, the significance and emotions they hold will forever remain untarnished. We create more than jewelry; we craft enduring symbols of your unique experiences and timeless elegance. Every scratch adds character, every moment adds meaning, and together they form the narrative of a life well-lived."
-        paragraphWrapperCss="md:w-2/5 mb-12"
+
+      <TypoParagraphBlock
+        className="mb-64"
+        fatText={fatTextValue}
+        fatTextPosition="sx"
+        fatTextCss="leading-relaxed fat-text dark:text-white"
+        paragraph={longFirstPat}
+        paragraphWrapperCss="lg:w-2/5 mb-12"
         paragraphCss="text-lg font-now text-justify md:text-start dark:text-white"
-      />
+      ></TypoParagraphBlock>
+
 
       <ImageParagraphBlock
         title="Our process"
@@ -106,8 +112,8 @@ export default async function Home({
         imgAlt="H ring"
         imgPosition="sx"
         paragraph={longSecondPar}
-        paragraphWrapperCss="md:w-2/5 mb-12 pe-12 font-now"
-        paragraphCss="text-lg text-justify md:text-start dark:text-white"
+        paragraphWrapperCss="md:w-2/5 my-12 md:mt-0 md:pe-12"
+        paragraphCss="text-lg font-now text-justify md:text-start dark:text-white"
       />
     </div>
   )
