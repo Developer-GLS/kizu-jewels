@@ -85,7 +85,7 @@ export default async function Home({
   }
 
   return (
-    <div className="dark:bg-black bg-white">
+    <div className="bg-white dark:bg-stone-900 pb-48">
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
@@ -97,23 +97,23 @@ export default async function Home({
         className="mb-64"
         fatText={fatTextValue}
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text dark:text-white"
+        fatTextCss="leading-relaxed fat-text text-stone-900 dark:text-white"
         paragraph={longFirstPat}
         paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start dark:text-white"
+        paragraphCss="text-lg font-now text-justify md:text-start text-stone-900 dark:text-white"
       ></TypoParagraphBlock>
 
 
       <ImageParagraphBlock
         title="Our process"
         titleSize="h3"
-        titleCss="text-4xl mb-24 dark:text-white"
+        titleCss="text-4xl mb-24 text-stone-900 dark:text-white"
         imgPath={secondParImg}
         imgAlt="H ring"
         imgPosition="sx"
         paragraph={longSecondPar}
         paragraphWrapperCss="md:w-2/5 my-12 md:mt-0 md:pe-12"
-        paragraphCss="text-lg font-now text-justify md:text-start dark:text-white"
+        paragraphCss="text-lg font-now text-justify md:text-start text-stone-900 dark:text-white"
       />
     </div>
   )

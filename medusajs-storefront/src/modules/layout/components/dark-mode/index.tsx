@@ -1,7 +1,6 @@
 "use client"
 
-import { SunSolid } from "@medusajs/icons"
-import { Sun } from "@medusajs/icons"
+import { Sun, MoonSolid } from "@medusajs/icons"
 import { useState } from "react";
 const DarkMode = () => {
 
@@ -13,13 +12,13 @@ const DarkMode = () => {
     }
     return (
         <div className="flex items-center">
-        <button className="p-2"  onClick={()=> darkModeHandler()}>
+        <button className="p-2 ms-8"  onClick={()=> darkModeHandler()}>
             {
                 
-                dark && <Sun />
+                dark && <MoonSolid />
             }
             {
-                !dark && <SunSolid />
+                !dark && <Sun />
             }
         </button>
     </div>
