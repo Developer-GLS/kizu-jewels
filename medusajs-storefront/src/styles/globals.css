@@ -10,6 +10,25 @@
 @font-face {
   font-family: "Now";
   src: url("../assets/fonts/now/Now-Light.otf");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("../assets/fonts/now/Now-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("../assets/fonts/now/Now-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("../assets/fonts/now/Now-Bold.otf");
+  font-weight: bold;
 }
 
 @layer utilities {

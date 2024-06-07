@@ -5,14 +5,14 @@ import NextJs from "../../../common/icons/nextjs"
 
 const GlsCTA = () => {
   return (
-    <Text className="flex gap-x-2 txt-compact-small-plus items-center">
+    <Text className="flex gap-x-2 txt-compact-small-plus items-center text-stone-400 txt-small">
       Powered by
       <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
-        <Gls fill="#9ca3af" className="fill-[#9ca3af]" />
+        <Gls fill="#A0A5A7" className="fill-[#A0A5A7]" />
       </a>
       &
       <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-        <NextJs fill="#9ca3af" />
+        <NextJs fill="#A0A5A7" />
       </a>
     </Text>
   )

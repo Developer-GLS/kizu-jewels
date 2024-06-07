@@ -12,7 +12,7 @@ const DarkMode = () => {
     }
     return (
         <div className="flex items-center">
-        <button className="p-2 ms-8"  onClick={()=> darkModeHandler()}>
+        <button className="p-2 md:ms-5"  onClick={()=> darkModeHandler()}>
             {
                 
                 dark && <MoonSolid />

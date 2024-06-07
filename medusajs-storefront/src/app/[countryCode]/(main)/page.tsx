@@ -94,7 +94,7 @@ export default async function Home({
       </div>
 
       <TypoParagraphBlock
-        className="mb-64"
+        className="mb-48"
         fatText={fatTextValue}
         fatTextPosition="sx"
         fatTextCss="leading-relaxed fat-text text-stone-900 dark:text-white"

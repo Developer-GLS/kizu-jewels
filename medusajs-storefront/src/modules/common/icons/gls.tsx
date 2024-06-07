@@ -4,7 +4,7 @@ import { IconProps } from "types/icon"
 
 const Gls: React.FC<IconProps> = ({
   size = "20",
-  color = "#9CA3AF",
+  color = "#A0A5A7",
   ...attributes
 }) => {
   return (

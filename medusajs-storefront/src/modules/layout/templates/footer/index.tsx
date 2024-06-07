@@ -10,7 +10,7 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-ui-border-base w-full dark:bg-stone-800">
+    <footer className="border-t border-ui-border-base w-full bg-stone-200 dark:bg-stone-700">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40 flex-wrap">
           <div className="w-full md:w-1/3">
@@ -165,7 +165,7 @@ l54 55 -98 0 -98 0 30 -34z"
           <div className="w-full md:w-2/3 text-small-regular gap-10 md:gap-x-16 grid grid-cols-1 sm:grid-cols-2">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+                <span className="text-stone-900 dark:text-white uppercase font-bold font-now">
                   Categories
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
@@ -183,7 +183,7 @@ l54 55 -98 0 -98 0 30 -34z"
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small"
                         key={c.id}
                       >
                         <LocalizedClientLink
@@ -218,12 +218,12 @@ l54 55 -98 0 -98 0 30 -34z"
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+                <span className="text-stone-900 dark:text-white uppercase font-bold font-now">
                   Collections
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
+                    "grid grid-cols-1 gap-2",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -232,7 +232,7 @@ l54 55 -98 0 -98 0 30 -34z"
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
+                        className="text-stone-800 dark:text-white txt-small hover:text-ui-fg-base"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -244,8 +244,8 @@ l54 55 -98 0 -98 0 30 -34z"
             )}
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-center md:justify-between text-ui-fg-muted flex-wrap">
-          <Text className="txt-compact-small w-full md:w-auto text-center md:text-start mb-8 md:mb-0">
+        <div className="flex w-full mb-8 justify-center md:justify-between text-ui-fg-muted flex-wrap">
+          <Text className="txt-compact-small w-full md:w-auto text-center md:text-start mb-8 md:mb-0 text-stone-400 txt-small">
             © {new Date().getFullYear()} Kizu Jewlery. All rights reserved.
           </Text>
           <GlsCta />
