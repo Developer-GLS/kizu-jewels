@@ -97,23 +97,23 @@ export default async function Home({
         className="mb-48"
         fatText={fatTextValue}
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text text-stone-900 dark:text-white"
+        fatTextCss="leading-relaxed fat-text text-ui-fg-base"
         paragraph={longFirstPat}
         paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-stone-900 dark:text-white"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
       ></TypoParagraphBlock>
 
 
       <ImageParagraphBlock
         title="Our process"
         titleSize="h3"
-        titleCss="text-4xl mb-24 text-stone-900 dark:text-white"
+        titleCss="text-4xl mb-24 text-ui-fg-base"
         imgPath={secondParImg}
         imgAlt="H ring"
         imgPosition="sx"
         paragraph={longSecondPar}
         paragraphWrapperCss="md:w-2/5 my-12 md:mt-0 md:pe-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-stone-900 dark:text-white"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
       />
     </div>
   )

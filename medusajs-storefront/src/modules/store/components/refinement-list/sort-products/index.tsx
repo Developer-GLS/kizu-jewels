@@ -33,12 +33,14 @@ const SortProducts = ({ sortBy, setQueryParams }: SortProductsProps) => {
   }
 
   return (
-    <FilterRadioGroup
-      title="Sort by"
-      items={sortOptions}
-      value={sortBy}
-      handleChange={handleChange}
-    />
+    <div>
+      <FilterRadioGroup
+        title="Sort by"
+        items={sortOptions}
+        value={sortBy}
+        handleChange={handleChange}
+      />
+    </div>
   )
 }
 

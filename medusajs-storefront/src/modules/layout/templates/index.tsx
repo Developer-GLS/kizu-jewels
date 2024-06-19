@@ -9,7 +9,7 @@ const Layout: React.FC<{
   return (
     <div>
       <Nav />
-      <main className="relative">{children}</main>
+      <main className="relative bg-white dark:bg-stone-900">{children}</main>
       <Footer />
     </div>
   )

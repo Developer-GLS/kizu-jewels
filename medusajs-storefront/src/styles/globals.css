@@ -32,6 +32,7 @@
 }
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -42,16 +43,18 @@
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
-  input:focus ~ label,
-  input:not(:placeholder-shown) ~ label {
+  input:focus~label,
+  input:not(:placeholder-shown)~label {
     @apply -translate-y-2 text-xsmall-regular;
   }
 
-  input:focus ~ label {
+  input:focus~label {
     @apply left-0;
   }
 
@@ -140,17 +143,63 @@
   }
 }
 
+.fat-text {
+  font-size: 82px;
+}
+
+.text-ui-fg-base {
+  @apply text-stone-900;
+}
+
+body.dark .text-ui-fg-base {
+  @apply text-stone-100;
+}
+
+.border-ui-border-base {
+  @apply border-stone-900
+}
+
+body.dark .border-ui-border-base {
+  @apply border-stone-100
+}
+
+.bg-ui-bg-subtle {
+  @apply bg-stone-100
+}
+
+body.dark .bg-ui-bg-subtle {
+  @apply bg-stone-900
+}
+
+.disabled\:bg-ui-bg-disabled:disabled {
+  background-color: rgb(231 229 228) !important;
+}
+
+body.dark .disabled\:bg-ui-bg-disabled:disabled {
+  background-color: rgb(68 64 60) !important;
+}
+
+.disabled\:text-ui-fg-disabled:disabled {
+  color: rgb(28 25 23) !important;
+}
+
+body.dark .disabled\:text-ui-fg-disabled:disabled {
+  color: rgb(245 245 244) !important;
+}
+
+.disabled\:border-ui-border-base:disabled {
+  border: 1px solid rgb(28 25 23) !important;
+}
+
+body.dark .disabled\:border-ui-border-base:disabled {
+  border: 1px solid rgb(245 245 244) !important;
+}
+
 .hero-container {
   height: calc(75vh + 145px);
   background: url('../assets/imgs/home/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-
-
-.fat-text {
-  font-size: 82px;
 }
 
 @media screen and (max-width: 639px) {

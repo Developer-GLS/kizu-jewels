@@ -7,7 +7,7 @@ const Hero = () => {
         <span>
           <Heading
             level="h1"
-            className="text-8xl leading-10 dark:text-white text-stone-800 font-tostada"
+            className="text-8xl leading-10 text-ui-fg-base font-tostada"
           >
             Kizu
           </Heading>

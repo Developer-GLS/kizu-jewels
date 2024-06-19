@@ -13,7 +13,7 @@ export default async function Nav() {
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative mx-auto duration-200 bg-white dark:bg-stone-900">
-        <nav className="content-container txt-xsmall-plus text-stone-900 dark:text-white flex items-center justify-between w-full h-full text-small-regular">
+        <nav className="content-container txt-xsmall-plus text-ui-fg-base flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
               <SideMenu regions={regions} />
@@ -172,7 +172,7 @@ l54 55 -98 0 -98 0 30 -34z"
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base text-stone-900 dark:text-white"
+                  className="hover:text-ui-fg-base text-ui-fg-base"
                   href="/search"
                   scroll={false}
                 >
@@ -180,7 +180,7 @@ l54 55 -98 0 -98 0 30 -34z"
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
-                className="text-stone-900 dark:text-white hover:text-ui-fg-base font-bold"
+                className="text-ui-fg-base hover:text-ui-fg-base font-bold"
                 href="/account"
               >
                 <User />
@@ -189,7 +189,7 @@ l54 55 -98 0 -98 0 30 -34z"
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="text-stone-900 dark:text-white hover:text-ui-fg-base flex gap-2"
+                  className="text-ui-fg-base hover:text-ui-fg-base flex gap-2"
                   href="/cart"
                 >
                   <ShoppingBag />
