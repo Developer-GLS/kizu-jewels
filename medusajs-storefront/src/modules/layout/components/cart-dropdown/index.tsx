@@ -81,7 +81,7 @@ const CartDropdown = ({
         <Popover.Button className="h-full">
           <LocalizedClientLink className="hover:text-ui-fg-base relative" href="/cart">
             <ShoppingBag />
-            <span className="absolute -top-2 -right-2">{totalItems}</span>
+            <span className="absolute -top-2 -right-2 minicart-items-counter">{totalItems}</span>
           </LocalizedClientLink>
         </Popover.Button>
         <Transition

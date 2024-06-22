@@ -207,3 +207,11 @@ body.dark .disabled\:border-ui-border-base:disabled {
     font-size: 60px;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+
+  .minicart-items-counter {
+    top: -2rem;
+    right: -1.5rem;
+  }
+}
