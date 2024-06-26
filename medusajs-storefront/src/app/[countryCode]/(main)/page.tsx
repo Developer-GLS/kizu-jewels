@@ -94,7 +94,7 @@ export default async function Home({
       </div>
 
       <TypoParagraphBlock
-        className="mb-48 mx-12"
+        className="lg:mb-48 mx-12"
         fatText={fatTextValue}
         fatTextPosition="sx"
         fatTextCss="leading-relaxed fat-text text-ui-fg-base"
@@ -107,7 +107,7 @@ export default async function Home({
       <ImageParagraphBlock
         title="Our process"
         titleSize="h3"
-        titleCss="text-4xl mb-24 text-ui-fg-base"
+        titleCss="text-4xl mb-8 lg:mb-24 text-ui-fg-base"
         imgPath={secondParImg}
         imgAlt="H ring"
         imgPosition="sx"

@@ -13,7 +13,7 @@ export default async function MobileCategories() {
         my="sm"
         fatText="Collections"
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text text-ui-fg-base text-center"
+        fatTextCss="leading-relaxed text-[42px] text-ui-fg-base text-center mb-6"
         paragraph="Discover out exclusive collections, remeber: each piece is unique and completly handmade and handforged"
         paragraphWrapperCss="lg:w-2/5 mb-4"
         paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"

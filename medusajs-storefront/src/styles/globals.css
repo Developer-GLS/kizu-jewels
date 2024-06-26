@@ -171,6 +171,10 @@ body.dark .bg-ui-bg-subtle {
   @apply bg-stone-900
 }
 
+.rounded-lg {
+  border-radius: 0 !important;
+}
+
 .disabled\:bg-ui-bg-disabled:disabled {
   background-color: rgb(231 229 228) !important;
 }
@@ -200,13 +204,23 @@ body.dark .disabled\:border-ui-border-base:disabled {
   background: url('../assets/imgs/home/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+body.dark .hero-container {
+  height: calc(75vh + 145px);
+  background: url('../assets/imgs/home/hero-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(20) contrast(5) grayscale(.99) brightness(.9)
 }
 
 .mobile-store {
   background: url('../assets/imgs/store/mob-back.png');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: saturate(50) contrast(50) grayscale(1) brightness(.9);
+  filter: saturate(90) grayscale() brightness(1.2) ;
 }
 
 body.dark .mobile-store {
