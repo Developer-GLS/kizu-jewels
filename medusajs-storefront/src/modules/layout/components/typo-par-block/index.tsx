@@ -37,7 +37,7 @@ const TypoParagraphBlock = ({
       </Heading>
       <div
         className={clx(
-          "flex mx-12 justify-center md:justify-between flex-wrap lg:flex-nowrap",
+          "flex justify-center md:justify-between flex-wrap lg:flex-nowrap",
           {
             "my-4": my === "sm",
             "my-8": my === "md",

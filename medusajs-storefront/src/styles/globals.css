@@ -202,6 +202,20 @@ body.dark .disabled\:border-ui-border-base:disabled {
   background-size: cover;
 }
 
+.mobile-store {
+  background: url('../assets/imgs/store/mob-back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: saturate(50) contrast(50) grayscale(1) brightness(.9);
+}
+
+body.dark .mobile-store {
+  background: url('../assets/imgs/store/mob-back-dark.png');
+  filter: saturate(20) contrast(5) grayscale(.99) brightness(.9);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (max-width: 639px) {
   .fat-text {
     font-size: 60px;

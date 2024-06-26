@@ -2,11 +2,11 @@ import { getCategoriesList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { clx } from "@medusajs/ui"
 
-export default async function Categories() {
+export default async function DesktopCategories() {
   const { product_categories } = await getCategoriesList(0, 6);
   
   return (
-    <div className="small:flex-col gap-12 pt-3.5 pb-4 mb-8 small:px-0 pl-6 small:min-w-[250px] small:ml-[1.675rem] hidden lg:flex">
+    <div className="flex small:flex-col gap-12 pt-3.5 pb-4 mb-8 small:px-0 pl-6 small:min-w-[250px] small:ml-[1.675rem]">
       {product_categories && product_categories?.length > 0 && (
         <div>
           <span className="text-ui-fg-base uppercase font-bold font-now">

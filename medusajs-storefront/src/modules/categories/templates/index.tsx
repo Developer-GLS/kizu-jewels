@@ -35,7 +35,7 @@ export default function CategoryTemplate({
         <RefinementList sortBy={sortBy || "created_at"} />
       </div>
       <div className="w-full">
-        <div className="flex flex-row mb-8 text-2xl-semi gap-4 font-tostada">
+        <div className="flex flex-row mb-8 text-2xl-semi gap-4 font-tostada text-ui-fg-base justify-center lg:justify-start">
           {parents &&
             parents.map((parent) => (
               <span key={parent.id} className="text-ui-fg-subtle">
@@ -51,7 +51,7 @@ export default function CategoryTemplate({
           <h1>{category.name}</h1>
         </div>
         {category.description && (
-          <div className="mb-8 text-light font-now">
+          <div className="mb-8 text-ui-fg-base font-now">
             <p>{category.description}</p>
           </div>
         )}
