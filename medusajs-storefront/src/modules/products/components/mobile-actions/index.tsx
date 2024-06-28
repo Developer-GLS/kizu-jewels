@@ -97,18 +97,19 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 <div></div>
               )}
             </div>
-            <div 
-            className={clx(
-                        "grid w-full gap-x-4",
-                        {
-                          "grid-cols-1": Object.values(options).length <= 0,
-                          "grid-cols-2": Object.values(options).length > 0,
-                        })}>
-              <Button onClick={open} variant="secondary" className={clx(
-                        "w-full",
-                        {
-                          "hidden": Object.values(options).length <= 0,
-                        })}>
+            <div
+              className={clx("grid w-full gap-x-4", {
+                "grid-cols-1": Object.values(options).length <= 0,
+                "grid-cols-2": Object.values(options).length > 0,
+              })}
+            >
+              <Button
+                onClick={open}
+                variant="secondary"
+                className={clx("w-full", {
+                  hidden: Object.values(options).length <= 0,
+                })}
+              >
                 <div className="flex items-center justify-between w-full">
                   <span>
                     {variant

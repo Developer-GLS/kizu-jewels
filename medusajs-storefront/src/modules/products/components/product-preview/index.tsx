@@ -44,7 +44,11 @@ export default async function ProductPreview({
           isFeatured={isFeatured}
         />
         <div className="flex txt-compact-medium mt-4 justify-center">
-          <Text className="uppercase text-ui-fg-base" size='large' weight='regular'>
+          <Text
+            className="uppercase text-ui-fg-base"
+            size="large"
+            weight="regular"
+          >
             {productPreview.title}
           </Text>
         </div>
