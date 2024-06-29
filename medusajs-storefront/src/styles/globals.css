@@ -156,11 +156,12 @@ body.dark .text-ui-fg-base {
 }
 
 .border-ui-border-base {
-  @apply border-stone-900
+  border-color: transparent;
 }
 
 body.dark .border-ui-border-base {
-  @apply border-stone-100
+  border-color: #45403C;
+  color: #45403C;
 }
 
 .bg-ui-bg-subtle {
@@ -176,7 +177,7 @@ body.dark .bg-ui-bg-subtle {
 }
 
 .disabled\:bg-ui-bg-disabled:disabled {
-  background-color: rgb(231 229 228) !important;
+  background-color: transparent !important;
 }
 
 body.dark .disabled\:bg-ui-bg-disabled:disabled {
@@ -199,6 +200,31 @@ body.dark .disabled\:border-ui-border-base:disabled {
   border: 1px solid rgb(245 245 244) !important;
 }
 
+.border-ui-border-interactive {
+  border-color: initial !important;
+}
+
+.mobile-pdp-select {
+  background-color: transparent !important;
+  color: #585550 !important;
+}
+
+.mobile-pdp-select:focus {
+  -webkit-box-shadow: 0px 0px 4px 2px #454443 !important;
+  box-shadow: 0px 0px 4px 2px #454443 !important;
+}
+
+.mobile-pdp-option {
+  color: #A5A3A2 !important;
+  border-color: #A5A3A2 !important;
+  background-color: transparent !important;
+}
+
+.mobile-pdp-option.border-ui-border-interactive {
+  color: #585550 !important;
+  border-color: #585550 !important;
+}
+
 .hero-container {
   height: calc(75vh + 145px);
   background: url('../assets/imgs/home/hero.jpg');
@@ -213,14 +239,14 @@ body.dark .hero-container {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: saturate(20) contrast(5) grayscale(.99) brightness(.9)
+  filter: saturate(20) contrast(2) grayscale(1) brightness(.9)
 }
 
 .mobile-store {
   background: url('../assets/imgs/store/mob-back.png');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: saturate(90) grayscale() brightness(1.2) ;
+  filter: saturate(90) grayscale() brightness(1.2);
 }
 
 body.dark .mobile-store {

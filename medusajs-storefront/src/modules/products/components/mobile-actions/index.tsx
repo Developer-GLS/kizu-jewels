@@ -57,7 +57,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   return (
     <>
       <div
-        className={clx("lg:hidden inset-x-0 bottom-0 fixed", {
+        className={clx("lg:hidden inset-x-0 bottom-0 fixed z-[2]", {
           "pointer-events-none": !show,
         })}
       >
@@ -106,7 +106,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={open}
                 variant="secondary"
-                className={clx("w-full", {
+                className={clx("w-full mobile-pdp-select", {
                   hidden: Object.values(options).length <= 0,
                 })}
               >
@@ -122,7 +122,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className="w-full mobile-pdp-button"
                 isLoading={isAdding}
               >
                 {!variant
@@ -164,7 +164,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <div className="w-full flex justify-end pr-6">
                     <button
                       onClick={close}
-                      className="bg-white w-12 h-12 rounded-full text-ui-fg-base flex justify-center items-center"
+                      className="bg-white w-12 h-12 rounded-full flex justify-center items-center"
                     >
                       <X />
                     </button>
