@@ -5,6 +5,7 @@ import { ProductCategoryWithChildren } from "types/global"
 import InteractiveLink from "@modules/common/components/interactive-link"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import RefinementList from "@modules/store/components/refinement-list"
+import MobRefinementList from "@modules/store/components/refinement-list/mob"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -32,7 +33,9 @@ export default function CategoryTemplate({
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container bg-white dark:bg-stone-900">
       <div className="flex flex-col">
         <Categories />
-        <RefinementList sortBy={sortBy || "created_at"} />
+        <div className="hidden lg:block">
+          <RefinementList sortBy={sortBy || "created_at"} />
+        </div>
       </div>
       <div className="w-full">
         <div className="flex flex-row mb-8 text-2xl-semi gap-4 font-tostada text-ui-fg-base justify-center lg:justify-start">
@@ -55,6 +58,10 @@ export default function CategoryTemplate({
             <p>{category.description}</p>
           </div>
         )}
+
+        <div className="block lg:hidden">
+        <MobRefinementList sortBy={sortBy || "created_at"} />
+        </div>
         {category.category_children && (
           <div className="mb-8 text-base-large">
             <ul className="grid grid-cols-1 gap-2">
