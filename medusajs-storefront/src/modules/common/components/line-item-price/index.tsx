@@ -9,12 +9,14 @@ type LineItemPriceProps = {
   item: Omit<LineItem, "beforeInsert">
   region: Region
   style?: "default" | "tight"
+  cartPage?: boolean
 }
 
 const LineItemPrice = ({
   item,
   region,
   style = "default",
+    cartPage = false,
 }: LineItemPriceProps) => {
   const originalPrice =
     (item.variant as CalculatedVariant).original_price * item.quantity
@@ -47,6 +49,7 @@ const LineItemPrice = ({
         <span
           className={clx("text-stone-900", {
             "text-ui-fg-interactive": hasReducedPrice,
+            "text-ui-fg-base": cartPage,
           })}
         >
           {formatAmount({

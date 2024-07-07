@@ -13,18 +13,18 @@ const ItemsTemplate = ({ items, region }: ItemsTemplateProps) => {
   return (
     <div>
       <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">Cart</Heading>
+        <Heading className="text-[2rem] leading-[2.75rem] text-ui-fg-base">Cart</Heading>
       </div>
       <Table>
         <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus">
-            <Table.HeaderCell className="!pl-0">Item</Table.HeaderCell>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>Quantity</Table.HeaderCell>
-            <Table.HeaderCell className="hidden small:table-cell">
+          <Table.Row className="text-ui-fg-subtle txt-medium-plus bg-fg">
+            <Table.HeaderCell className="!pl-0 text-ui-fg-base font-now">Item</Table.HeaderCell>
+            <Table.HeaderCell className="text-ui-fg-base font-now"></Table.HeaderCell>
+            <Table.HeaderCell className="text-ui-fg-base font-now">Quantity</Table.HeaderCell>
+            <Table.HeaderCell className="hidden small:table-cell text-ui-fg-base font-now">
               Price
             </Table.HeaderCell>
-            <Table.HeaderCell className="!pr-0 text-right">
+            <Table.HeaderCell className="!pr-0 text-right text-ui-fg-base font-now">
               Total
             </Table.HeaderCell>
           </Table.Row>

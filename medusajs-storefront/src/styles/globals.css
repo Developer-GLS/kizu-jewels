@@ -151,6 +151,14 @@
   @apply text-stone-900;
 }
 
+.text-ui-fg-interactive {
+  @apply text-stone-700;
+}
+
+body.dark .text-ui-fg-interactive  {
+  @apply text-stone-200;
+}
+
 body.dark .text-ui-fg-base {
   @apply text-stone-100;
 }

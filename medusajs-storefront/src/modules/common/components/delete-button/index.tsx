@@ -8,10 +8,12 @@ const DeleteButton = ({
   id,
   children,
   className,
+    cartPage = false
 }: {
   id: string
   children?: React.ReactNode
   className?: string
+  cartPage?: boolean
 }) => {
   const [isDeleting, setIsDeleting] = useState(false)
 
@@ -29,8 +31,14 @@ const DeleteButton = ({
         className
       )}
     >
+
       <button
-        className="flex gap-x-1 text-stone-900 hover:text-stone-400 cursor-pointer"
+          className={clx(
+              "flex gap-x-1 text-stone-900 hover:text-stone-400 cursor-pointer",
+              {
+                'text-ui-fg-base': cartPage
+              }
+          )}
         onClick={() => handleDelete(id)}
       >
         {isDeleting ? <Spinner className="animate-spin" /> : <Trash />}

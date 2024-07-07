@@ -46,7 +46,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
   }
 
   return (
-    <Table.Row className="w-full">
+    <Table.Row className="w-full bg-white dark:bg-stone-900">
       <Table.Cell className="!pl-0 p-4 w-24">
         <LocalizedClientLink
           href={`/products/${handle}`}
@@ -67,7 +67,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
       {type === "full" && (
         <Table.Cell>
           <div className="flex gap-2 items-center w-28">
-            <DeleteButton id={item.id} />
+            <DeleteButton id={item.id} cartPage={true}/>
             <CartItemSelect
               value={item.quantity}
               onChange={(value) => changeQuantity(parseInt(value.target.value))}
@@ -113,7 +113,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
               <LineItemUnitPrice item={item} region={region} style="tight" />
             </span>
           )}
-          <LineItemPrice item={item} region={region} style="tight" />
+          <LineItemPrice item={item} region={region} style="tight" cartPage={true}/>
         </span>
       </Table.Cell>
     </Table.Row>
