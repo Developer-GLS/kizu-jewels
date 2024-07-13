@@ -50,11 +50,11 @@ const Addresses = ({
   const [message, formAction] = useFormState(setAddresses, null)
 
   return (
-    <div className="bg-white">
+    <div className="bg-whit dark:bg-stone-900">
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
-          className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
+          className="flex flex-row gap-x-2 items-baseline text-ui-fg-base font-now txt-xlarge-plus"
         >
           Address
           {!isOpen && <CheckCircleSolid />}
@@ -85,7 +85,7 @@ const Addresses = ({
               <div>
                 <Heading
                   level="h2"
-                  className="text-3xl-regular gap-x-4 pb-6 pt-8"
+                  className="text-ui-fg-base font-now txt-xlarge-plus gap-x-4 pb-6 pt-8"
                 >
                   Billing address
                 </Heading>
@@ -104,7 +104,7 @@ const Addresses = ({
               <div className="flex items-start gap-x-8">
                 <div className="flex items-start gap-x-1 w-full">
                   <div className="flex flex-col w-1/3">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-ui-fg-base font-now txt-xlarge mb-1">
                       Shipping Address
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -125,7 +125,7 @@ const Addresses = ({
                   </div>
 
                   <div className="flex flex-col w-1/3 ">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-ui-fg-base font-now txt-xlarge-plus mb-1">
                       Contact
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -137,12 +137,12 @@ const Addresses = ({
                   </div>
 
                   <div className="flex flex-col w-1/3">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-ui-fg-base font-now mb-1 txt-xlarge-plus">
                       Billing Address
                     </Text>
 
                     {sameAsSBilling ? (
-                      <Text className="txt-medium text-ui-fg-subtle">
+                      <Text className="txt-medium text-ui-fg-base">
                         Billing- and delivery address are the same.
                       </Text>
                     ) : (

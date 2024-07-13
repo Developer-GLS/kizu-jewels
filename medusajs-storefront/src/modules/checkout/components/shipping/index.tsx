@@ -64,12 +64,12 @@ const Shipping: React.FC<ShippingProps> = ({
   }, [isOpen])
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-stone-900">
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
           className={clx(
-            "flex flex-row text-3xl-regular gap-x-2 items-baseline",
+            "flex flex-row txt-xlarge-plus font-now text-ui-fg-base gap-x-2 items-baseline",
             {
               "opacity-50 pointer-events-none select-none":
                 !isOpen && cart.shipping_methods.length === 0,
@@ -107,22 +107,22 @@ const Shipping: React.FC<ShippingProps> = ({
                       key={option.id}
                       value={option.id}
                       className={clx(
-                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border border-stone-500 dark:border-stone-500 rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
                         {
-                          "border-ui-border-interactive":
+                          "border-stone-500 dark:border-stone-200":
                             option.id ===
                             cart.shipping_methods[0]?.shipping_option_id,
                         }
                       )}
                     >
-                      <div className="flex items-center gap-x-4">
+                      <div className="flex items-center gap-x-4 border-stone-900 dark:border-stone-100">
                         <Radio
                           checked={
                             option.id ===
                             cart.shipping_methods[0]?.shipping_option_id
                           }
                         />
-                        <span className="text-base-regular">{option.name}</span>
+                        <span className="text-base-regular text-ui-fg-base">{option.name}</span>
                       </div>
                       <span className="justify-self-end text-ui-fg-base">
                         {formatAmount({

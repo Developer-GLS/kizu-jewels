@@ -22,13 +22,13 @@ const CheckoutSummary = async () => {
 
   return (
     <div className="sticky top-0 flex flex-col-reverse small:flex-col gap-y-8 py-8 small:py-0 ">
-      <div className="w-full bg-white flex flex-col">
+      <div className="w-full bg-white dark:bg-stone-900 flex flex-col">
         <Divider className="my-6 small:hidden" />
         <Heading
           level="h2"
-          className="flex flex-row text-3xl-regular items-baseline"
+          className="flex flex-row font-medium h2-core text-[2rem] leading-[2.75rem] font-now text-ui-fg-base"
         >
-          In your Cart
+          Your Cart
         </Heading>
         <Divider className="my-6" />
         <CartTotals data={cart} />
