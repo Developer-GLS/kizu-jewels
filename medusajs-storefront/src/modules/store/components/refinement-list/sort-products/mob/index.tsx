@@ -23,7 +23,7 @@ const MobSortProducts = ({ sortBy, setQueryParams }: SortProductsProps) => {
     <div className="flex flex-col items-center gap-y-2">
       <DropdownMenu>
         <DropdownMenu.Trigger asChild>
-          <IconButton size="xlarge">
+          <IconButton size="large">
             <Funnel />
           </IconButton>
         </DropdownMenu.Trigger>

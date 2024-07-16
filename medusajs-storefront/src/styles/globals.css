@@ -265,6 +265,10 @@ body.dark .hero-container.home {
   filter: saturate(20) contrast(4) grayscale(1) brightness(.9)
 }
 
+.cta-block {
+  filter: saturate(.8) contrast(1.2) grayscale(.8) brightness(.9)
+}
+
 .mobile-store {
   background: url('../assets/imgs/store/mob-back.png');
   background-repeat: no-repeat;

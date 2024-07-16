@@ -8,8 +8,12 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 import TypoParagraphBlock from "@modules/layout/components/typo-par-block"
 
-const fatTextValue = `What "Kizu" means?`
+import ctaImg from "../../../../public/imgs/home/cta/img.png"
+import CtaBlock from "@modules/layout/components/cta-block";
 
+const ctaPar = 'Discover the artistry behind every piece at Kizu. Handcrafted with passion and precision, our unique creations are more than just accessories – they are timeless expressions of beauty. Learn about our journey, our commitment to quality, and the talented artisans who bring our designs to life. Explore our story and see why our jewelry is cherished by connoisseurs around the world.'
+
+const fatTextValue = `What "Kizu" means?`
 const longFirstPat = `
 In Japanese, Kizu means a scratch, a subtle mark that tells a story of time, use, and cherished memories. Our creations, forged by hand, embrace this philosophy, 
 celebrating the beauty in imperfection. Each piece is a testament to the skilled craftsmanship that intertwines modern design with traditional artistry. 
@@ -77,7 +81,7 @@ export default async function Home({
   }
 
   return (
-    <div className="bg-white dark:bg-stone-900 pb-48">
+    <div className="bg-white dark:bg-stone-900 pb:12 lg:pb-24">
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
@@ -95,6 +99,7 @@ export default async function Home({
         paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
       ></TypoParagraphBlock>
 
+        <CtaBlock className="min-h-[800px] lg:mx-12" title="About us" titleSize="h3" titleCss="text-6xl text-stone-100" paragraph={ctaPar} parCss="text-justify text-stone-100 px-4"  backgroundImgUrl={ctaImg.src} haveCta={true} ctaLink='/about-us' ctaText='Discover more' ctaCss="block text-center mt-8"/>
     </div>
   )
 }
