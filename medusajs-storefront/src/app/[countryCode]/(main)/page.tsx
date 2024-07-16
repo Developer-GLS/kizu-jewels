@@ -6,10 +6,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
-import ImageParagraphBlock from "@modules/layout/components/par-block"
 import TypoParagraphBlock from "@modules/layout/components/typo-par-block"
-import firstParImg from "../../../assets/imgs/home/paragraphs/Par_1/img.webp"
-import secondParImg from "../../../assets/imgs/home/paragraphs/Par_2/img.webp"
 
 const fatTextValue = `What "Kizu" means?`
 
@@ -19,12 +16,7 @@ celebrating the beauty in imperfection. Each piece is a testament to the skilled
 As the metal of our jewelry may bear the delicate traces of life's journey, the significance and emotions they hold will forever remain untarnished. 
 We create more than jewelry; we craft enduring symbols of your unique experiences and timeless elegance. Every scratch adds character, every moment adds meaning, and together they form the narrative of a life well-lived.`
 
-const longSecondPar = `
-Our creative process honors both tradition and innovation, resulting in timeless, handcrafted jewelry. Each piece begins as a concept, born from the delicate balance between nature's imperfections and human artistry. ${"\n"}
-Hand-forging every element with unparalleled precision and care, we use the finest metals, allowing each piece to develop its own unique character through time-honored techniques.${"\n"} ${"\n"}
-We also believe that a piece of jewelry is not just an accessory but a powerful symbol, transcending labels and embracing individuality. Our designs are minimalist and elegant, focusing on clean lines and refined simplicity. Each piece is crafted to resonate with anyone who wears it, regardless of gender, celebrating personal expression and unique experiences.
-Kizu oreficians tries to forge a wearable work of art, designed to be lived, worn, and passed down through generations, embodying the essence of ageless beauty and personal meaning.
-`
+
 
 export const metadata: Metadata = {
   title: "GreenLeafStudio Jewlery Template",
@@ -103,18 +95,6 @@ export default async function Home({
         paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
       ></TypoParagraphBlock>
 
-
-      <ImageParagraphBlock
-        title="Our process"
-        titleSize="h3"
-        titleCss="text-4xl mb-8 lg:mb-24 text-ui-fg-base"
-        imgPath={secondParImg}
-        imgAlt="H ring"
-        imgPosition="sx"
-        paragraph={longSecondPar}
-        paragraphWrapperCss="md:w-2/5 my-12 md:mt-0 md:pe-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
-      />
     </div>
   )
 }

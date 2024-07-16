@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "A frontend ecommerce template developed by GreenLeafStudio - About us Page",
 }
 
-export default async function AboutPage({}: {}) {
+export default async function AboutUsPage({}: {}) {
 
 
     return (

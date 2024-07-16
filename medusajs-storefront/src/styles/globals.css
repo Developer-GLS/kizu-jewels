@@ -235,7 +235,14 @@ body.dark .disabled\:border-ui-border-base:disabled {
 
 .hero-container {
   height: calc(75vh + 145px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container.home {
   background: url('../assets/imgs/home/hero.jpg');
+  height: calc(75vh + 145px);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -243,11 +250,19 @@ body.dark .disabled\:border-ui-border-base:disabled {
 
 body.dark .hero-container {
   height: calc(75vh + 145px);
-  background: url('../assets/imgs/home/hero-dark.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: saturate(20) contrast(2) grayscale(1) brightness(.9)
+  filter: saturate(1.8) contrast(1)  brightness(.8)
+}
+
+body.dark .hero-container.home {
+  background: url('../assets/imgs/home/hero-dark.jpg');
+  height: calc(75vh + 145px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(20) contrast(4) grayscale(1) brightness(.9)
 }
 
 .mobile-store {

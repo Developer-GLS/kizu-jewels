@@ -2,7 +2,7 @@ import React from "react"
 
 import UnderlineLink from "@modules/common/components/interactive-link"
 
-import AccountNav from "../components/account-nav"
+import AccountNav from "@modules/about/components/account-nav"
 import { Customer } from "@medusajs/medusa"
 import { clx } from "@medusajs/ui"
 interface AccountLayoutProps {
