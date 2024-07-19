@@ -43,7 +43,7 @@ const AddAddress = ({ region }: { region: Region }) => {
   return (
     <>
       <button
-        className="border border-ui-border-base rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
+        className="border border-stone-400 dark:border-stone-100 rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between text-ui-fg-base"
         onClick={open}
       >
         <span className="text-base-semi">New address</span>

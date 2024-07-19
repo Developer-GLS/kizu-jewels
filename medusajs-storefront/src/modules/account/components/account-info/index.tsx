@@ -46,7 +46,7 @@ const AccountInfo = ({
           <span className="uppercase text-ui-fg-base">{label}</span>
           <div className="flex items-center flex-1 basis-0 justify-end gap-x-4">
             {typeof currentInfo === "string" ? (
-              <span className="font-semibold">{currentInfo}</span>
+              <span className="font-semibold text-ui-fg-base">{currentInfo}</span>
             ) : (
               currentInfo
             )}

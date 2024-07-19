@@ -25,12 +25,12 @@ const AccountNav = ({
   }
 
   return (
-    <div>
-      <div className="small:hidden">
+    <div className="h-full">
+      <div className="small:hidden h-full flex flex-col">
         {route !== `/${countryCode}/account` ? (
           <LocalizedClientLink
             href="/account"
-            className="flex items-center gap-x-2 text-small-regular py-2"
+            className="flex items-center gap-x-2 text-small-regular py-2 text-ui-fg-base mb-12"
           >
             <>
               <ChevronDown className="transform rotate-90" />
@@ -39,7 +39,7 @@ const AccountNav = ({
           </LocalizedClientLink>
         ) : (
           <>
-            <div className="text-xl-semi mb-4 px-8">
+            <div className="text-xl-semi px-8 text-ui-fg-base text-center font-now mb-12 grow">
               Hello {customer?.first_name}
             </div>
             <div className="text-base-regular">
@@ -47,7 +47,7 @@ const AccountNav = ({
                 <li>
                   <LocalizedClientLink
                     href="/account/profile"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 text-ui-fg-base"
                   >
                     <>
                       <div className="flex items-center gap-x-2">
@@ -61,7 +61,7 @@ const AccountNav = ({
                 <li>
                   <LocalizedClientLink
                     href="/account/addresses"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 text-ui-fg-base"
                   >
                     <>
                       <div className="flex items-center gap-x-2">
@@ -75,7 +75,7 @@ const AccountNav = ({
                 <li>
                   <LocalizedClientLink
                     href="/account/orders"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 text-ui-fg-base"
                   >
                     <div className="flex items-center gap-x-2">
                       <Package size={20} />
@@ -87,7 +87,7 @@ const AccountNav = ({
                 <li>
                   <button
                     type="button"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 w-full"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 w-full text-ui-fg-base"
                     onClick={handleLogout}
                   >
                     <div className="flex items-center gap-x-2">
@@ -105,7 +105,7 @@ const AccountNav = ({
       <div className="hidden small:block">
         <div>
           <div className="pb-4">
-            <h3 className="text-base-semi">Account</h3>
+            <h3 className="text-ui-fg-base text-4xl font-now">Account</h3>
           </div>
           <div className="text-base-regular">
             <ul className="flex mb-0 justify-start items-start flex-col gap-y-4">
@@ -130,7 +130,7 @@ const AccountNav = ({
                 </AccountNavLink>
               </li>
               <li className="text-grey-700">
-                <button type="button" onClick={handleLogout}>
+                <button type="button" onClick={handleLogout} className="text-ui-fg-base">
                   Log out
                 </button>
               </li>
