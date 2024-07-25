@@ -3,8 +3,10 @@ import { Suspense } from "react"
 
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import RefinementList from "@modules/store/components/refinement-list"
+import MobRefinementList from "@modules/store/components/refinement-list/mob"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
+import DesktopCategories from "@modules/store/templates/desktopCat"
 
 export default function CollectionTemplate({
   sortBy,
@@ -21,10 +23,16 @@ export default function CollectionTemplate({
 
   return (
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container bg-white dark:bg-stone-900">
-      <RefinementList sortBy={sortBy || "created_at"} />
+      <div className="flex flex-col hidden lg:block">
+        <DesktopCategories />
+        <RefinementList sortBy={sortBy || "created_at"} />
+      </div>
       <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
+        <div className="mb-8 text-2xl-semi font-tostada">
           <h1>{collection.title}</h1>
+        </div>
+        <div className="block lg:hidden">
+        <MobRefinementList sortBy={sortBy || "created_at"} />
         </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts

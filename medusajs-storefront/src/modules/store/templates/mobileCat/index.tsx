@@ -11,10 +11,10 @@ export default async function MobileCategories() {
     <TypoParagraphBlock
         className="mb-8"
         my="sm"
-        fatText="Collections"
+        fatText="Categories"
         fatTextPosition="sx"
         fatTextCss="leading-relaxed text-[42px] text-ui-fg-base text-center mb-6 mx-auto"
-        paragraph="Discover out exclusive collections, remeber: each piece is unique and completly handmade and handforged"
+        paragraph="Discover out exclusive products, remeber: each piece is unique and completly handmade and handforged"
         paragraphWrapperCss="lg:w-2/5 mb-4"
         paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
       ></TypoParagraphBlock>
