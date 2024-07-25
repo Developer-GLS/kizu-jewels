@@ -29,7 +29,11 @@ const ImageParagraphBlock = ({
   paragraphCss,
 }: ImageParagraphBlockProps) => {
   return (
-    <div className="wrapper">
+    <div  className={clx(
+      "wrapper",
+      className
+    )}
+  >
       <Heading
         className={clx("font-tostada text-center", titleCss)}
         level={titleSize}
@@ -43,8 +47,7 @@ const ImageParagraphBlock = ({
             "my-4": my === "sm",
             "my-8": my === "md",
             "my-12": my === "lg",
-          },
-          className
+          }
         )}
       >
         <div

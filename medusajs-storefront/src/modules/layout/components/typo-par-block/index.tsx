@@ -49,12 +49,12 @@ const TypoParagraphBlock = ({
         <div
           className={clx("typo-text-wrapper h-100 grow", {
             "order-1": fatTextPosition === "sx",
-            "order-2": fatTextPosition === "dx",
+            "order-1 lg:order-2": fatTextPosition === "dx",
           })}
         >
           <Text className={clx("w-full max-w-2xl font-tostada", {
             "mr-auto": fatTextPosition === "sx",
-            "ml-auto": fatTextPosition === "dx",
+            "ml-auto text-end": fatTextPosition === "dx",
           },fatTextCss)}
           
           >{fatText}</Text>
@@ -64,7 +64,7 @@ const TypoParagraphBlock = ({
           className={clx("paragraph-wrapper",
             {
               "md:ps-12 order-2": fatTextPosition === "sx",
-              "md:pe-12 order-1": fatTextPosition === "dx",
+              "lg:pe-12 md:ps-12 order-1": fatTextPosition === "dx",
             },
 
             paragraphWrapperCss

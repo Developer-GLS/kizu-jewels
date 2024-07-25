@@ -32,7 +32,7 @@ const MobRefinementList = ({ sortBy }: RefinementListProps) => {
   }
 
   return (
-    <div className="flex justify-end gap-12 py-4 mb-8 pl-6">
+    <div className="flex justify-end gap-12 mb-8 pl-6">
       <MobSortProducts sortBy={sortBy} setQueryParams={setQueryParams} />
     </div>
   )

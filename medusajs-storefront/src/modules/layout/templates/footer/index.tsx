@@ -11,7 +11,7 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full bg-stone-200 dark:bg-stone-700">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40 flex-wrap">
+        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-24 flex-wrap">
           <div className="w-full md:w-1/3">
             <LocalizedClientLink
               href="/"
@@ -89,7 +89,7 @@ l54 55 -98 0 -98 0 30 -34z"
                 </svg>
               </div>
               <div className="dark-svg-wrapper py-8 hidden dark:block">
-              <svg
+                <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
                   width="80"
@@ -162,6 +162,54 @@ l54 55 -98 0 -98 0 30 -34z"
             </LocalizedClientLink>
           </div>
           <div className="w-full md:w-2/3 text-small-regular gap-10 md:gap-x-16 grid grid-cols-1 sm:grid-cols-2">
+
+          <div className="flex flex-col gap-y-2">
+              <span className="text-ui-fg-base uppercase font-bold font-now">
+                Store
+              </span>
+              <ul className="grid grid-cols-1 gap-2">
+                <li className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base txt-small-plus")}
+                    href={`/about-us/`}
+                  >
+                    About us
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base txt-small-plus")}
+                    href={`/search/`}
+                  >
+                    Search
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base txt-small-plus")}
+                    href={`/store/`}
+                  >
+                    Shop
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base txt-small-plus")}
+                    href={`/cart/`}
+                  >
+                    Cart
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-stone-800 dark:text-white txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base txt-small-plus")}
+                    href={`/account/`}
+                  >
+                    Account
+                  </LocalizedClientLink>
+                </li>
+              </ul>
+            </div>
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="text-ui-fg-base uppercase font-bold font-now">
@@ -215,7 +263,6 @@ l54 55 -98 0 -98 0 30 -34z"
                 </ul>
               </div>
             )}
-
           </div>
         </div>
         <div className="flex w-full mb-8 justify-center md:justify-between text-ui-fg-muted flex-wrap">
