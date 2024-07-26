@@ -4,8 +4,8 @@ import bgImage from "../../../../public/imgs/about/bg.png"
 import ImageParagraphBlock from "@modules/layout/components/par-block"
 import TypoParagraphBlock from "@modules/layout/components/typo-par-block"
 
-import sustainibilityImg from "../../../../public/imgs/about/paragraphs/Par_1/img.jpg"
-import processImg from "../../../../public/imgs/about/paragraphs/Par_2/img.webp"
+import sustainibilityImg from "../../../../public/imgs/about/paragraphs/par-1/img.jpg"
+import processImg from "../../../../public/imgs/about/paragraphs/par-2/img.webp"
 
 const visionPar = `At Kizu, our vision is to create jewelry that celebrates the beauty of diversity and the power of individuality. 
 We believe that every piece should tell a unique story, reflecting the distinct personality and style of the wearer. 
@@ -60,7 +60,7 @@ const AboutTemplate = ({}) => {
 
 <TypoParagraphBlock
         className="lg:mb-48 mx-12 py-12"
-        fatText="Inclusivity"
+        fatText="Inclusive Jewlery"
         fatTextPosition="dx"
         fatTextCss="leading-relaxed fat-text text-ui-fg-base"
         paragraph={inclusionPar}
