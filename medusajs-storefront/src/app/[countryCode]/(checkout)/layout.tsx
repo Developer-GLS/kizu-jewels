@@ -1,6 +1,6 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
-import GlsCTA from "@modules/layout/components/gls-cta"
+import GlsIcons from "@modules/layout/components/gls-icons"
 
 export default function CheckoutLayout({
   children,
@@ -102,7 +102,7 @@ l54 55 -98 0 -98 0 30 -34z"
       </div>
       <div className="relative">{children}</div>
       <div className="py-4 w-full flex items-center justify-center">
-        <GlsCTA/>
+        <GlsIcons/>
       </div>
     </div>
   )

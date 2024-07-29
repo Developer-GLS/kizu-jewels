@@ -3,7 +3,7 @@ import { Text, clx } from "@medusajs/ui"
 import { getCategoriesList } from "@lib/data"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import GlsCta from "@modules/layout/components/gls-cta"
+import GlsIcons from "@modules/layout/components/gls-icons"
 
 export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
@@ -269,7 +269,7 @@ l54 55 -98 0 -98 0 30 -34z"
           <Text className="txt-compact-small w-full md:w-auto text-center md:text-start mb-8 md:mb-0 text-stone-400 txt-small">
             © {new Date().getFullYear()} Kizu Jewlery. All rights reserved.
           </Text>
-          <GlsCta />
+          <GlsIcons />
         </div>
       </div>
     </footer>

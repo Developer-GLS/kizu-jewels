@@ -73,7 +73,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
         )}
       >
         <div className="flex flex-col">
-          <Heading className="text-left text-base-semi">
+          <Heading className="text-left text-base-semi text-ui-fg-base mb-8">
             {address.first_name} {address.last_name}
           </Heading>
           {address.company && (
@@ -82,20 +82,20 @@ const EditAddress: React.FC<EditAddressProps> = ({
             </Text>
           )}
           <Text className="flex flex-col text-left text-base-regular mt-2">
-            <span>
+            <span className="text-ui-fg-base">
               {address.address_1}
               {address.address_2 && <span>, {address.address_2}</span>}
             </span>
-            <span>
+            <span className="text-ui-fg-base">
               {address.postal_code}, {address.city}
             </span>
-            <span>
+            <span className="text-ui-fg-base">
               {address.province && `${address.province}, `}
               {address.country_code?.toUpperCase()}
             </span>
           </Text>
         </div>
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center gap-x-4 mt-4">
           <button
             className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
             onClick={open}
@@ -119,7 +119,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="grid grid-cols-1 gap-y-2">
+            <div className="grid grid-cols-1 gap-y-2 mt-8">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
                   label="First name"
@@ -179,7 +179,8 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
               <CountrySelect
                 name="country_code"
-                region={region}
+                region={region}     
+                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium"
                 required
                 autoComplete="country"
                 defaultValue={address.country_code || undefined}

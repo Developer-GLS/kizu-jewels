@@ -56,7 +56,7 @@ const AddAddress = ({ region }: { region: Region }) => {
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-2 mt-8">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
                   label="First name"
@@ -108,6 +108,7 @@ const AddAddress = ({ region }: { region: Region }) => {
               />
               <CountrySelect
                 region={region}
+                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium"
                 name="country_code"
                 required
                 autoComplete="country"
@@ -126,11 +127,13 @@ const AddAddress = ({ region }: { region: Region }) => {
                 type="reset"
                 variant="secondary"
                 onClick={close}
-                className="h-10"
+                className="h-10 rounded-none"
               >
                 Cancel
               </Button>
-              <SubmitButton>Save</SubmitButton>
+              <SubmitButton
+               className="rounded-none"
+              >Save</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

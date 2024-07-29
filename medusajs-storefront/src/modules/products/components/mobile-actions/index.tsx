@@ -106,7 +106,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={open}
                 variant="secondary"
-                className={clx("w-full mobile-pdp-select", {
+                className={clx("w-full mobile-pdp-select rounded-none", {
                   hidden: Object.values(options).length <= 0,
                 })}
               >
@@ -122,7 +122,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full mobile-pdp-button"
+                className="w-full mobile-pdp-button rounded-none"
                 isLoading={isAdding}
               >
                 {!variant

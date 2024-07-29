@@ -55,7 +55,7 @@ const AccountInfo = ({
         <div>
           <Button
             variant="secondary"
-            className="w-[100px] min-h-[25px] py-1"
+            className="w-[100px] min-h-[25px] py-1 rounded-none"
             onClick={handleToggle}
             type={state ? "reset" : "button"}
           >
@@ -116,7 +116,7 @@ const AccountInfo = ({
             <div className="flex items-center justify-end mt-2">
               <Button
                 isLoading={pending}
-                className="w-full small:max-w-[140px]"
+                className="w-full small:max-w-[140px] rounded-none"
                 type="submit"
               >
                 Save changes

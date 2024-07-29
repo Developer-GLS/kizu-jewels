@@ -3,7 +3,7 @@ import { Text } from "@medusajs/ui"
 import Gls from "../../../common/icons/gls"
 import NextJs from "../../../common/icons/nextjs"
 
-const GlsCTA = () => {
+const GlsIcons = () => {
   return (
     <Text className="flex gap-x-2 txt-compact-small-plus items-center text-stone-400 txt-small">
       Powered by
@@ -18,4 +18,4 @@ const GlsCTA = () => {
   )
 }
 
-export default GlsCTA
+export default GlsIcons

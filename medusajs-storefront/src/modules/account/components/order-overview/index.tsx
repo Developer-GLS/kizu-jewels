@@ -30,7 +30,7 @@ const OrderOverview = ({ orders }: { orders: Order[] }) => {
       </p>
       <div className="mt-4">
         <LocalizedClientLink href="/" passHref>
-          <Button>Continue shopping</Button>
+          <Button className="rounded-none">Continue shopping</Button>
         </LocalizedClientLink>
       </div>
     </div>
