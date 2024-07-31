@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --palette-1: #c8975f;
+  --palette-2: #ff9a47;
+}
+
 @font-face {
   font-family: "Tostada";
   src: url("../assets/fonts/tostada/TOSTADA.ttf");
@@ -147,12 +152,37 @@
   font-size: 82px;
 }
 
+.border-palette-1 {
+  border-color: var(--palette-1) !important;
+}
+
+.border-palette-2 {
+  border-color: var(--palette-2) !important;
+}
+
 .text-ui-fg-base {
   @apply text-stone-900;
 }
 
 .text-ui-fg-interactive {
   @apply text-stone-700;
+}
+
+.text-ui-fg-interactive:hover {
+  color: var(--palette-1);
+}
+
+
+body.dark .text-ui-fg-interactive:hover  {
+  color: var(--palette-1);
+}
+
+.text-ui-fg-interactive:hover > .arrow-childs{
+  color: var(--palette-1);
+}
+
+body.dark .text-ui-fg-interactive:hover > .arrow-childs {
+  color: var(--palette-1);
 }
 
 body.dark .text-ui-fg-interactive  {

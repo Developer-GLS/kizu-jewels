@@ -38,7 +38,7 @@ export default function CategoryTemplate({
         </div>
       </div>
       <div className="w-full">
-        <div className="flex flex-row mb-8 text-2xl-semi gap-4 font-tostada text-ui-fg-base justify-center lg:justify-start">
+        <div className="flex flex-row mb-8 text-2xl-semi gap-4 font-tostada text-ui-fg-base justify-center lg:justify-start border-b-4 border-palette-1">
           {parents &&
             parents.map((parent) => (
               <span key={parent.id} className="text-ui-fg-subtle">

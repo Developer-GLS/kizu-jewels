@@ -3,6 +3,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 
 type ctaBlockProps = {
   className?: string
+  wrapperCss?: string
   direction?: string
   title?: string
   titleSize?: "h1" | "h2" | "h3"
@@ -18,6 +19,7 @@ type ctaBlockProps = {
 
 const CTABlock = ({
   className,
+  wrapperCss,
   direction,
   title,
   titleCss,
@@ -43,7 +45,8 @@ const CTABlock = ({
           "col-span-1 flex flex-col justify-center items-center text-center",
           {
             "order-3": direction == "dx",
-          }
+          },
+          wrapperCss
         )}
       >
         <Heading

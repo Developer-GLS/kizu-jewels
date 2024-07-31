@@ -33,7 +33,7 @@ module.exports = {
           70: "#374151",
           80: "#1F2937",
           90: "#111827",
-        },
+        }
       },
       borderRadius: {
         none: "0px",

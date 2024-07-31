@@ -20,8 +20,8 @@ export default function ProductRail({
 
   return (
     <div className="lg:px-12 py-12 small:py-24">
-      <div className="flex justify-between mb-8 px-8">
-        <Text className="text-2xl font-tostada text-ui-fg-base lg:ps-0">{collection.title}</Text>
+      <div className="flex justify-between mb-8">
+        <Text className="text-2xl font-tostada text-ui-fg-base lg:ps-0 border-b-2 border-palette-1">{collection.title}</Text>
         <InteractiveLink href={`/collections/${collection.handle}`}>
           View all
         </InteractiveLink>

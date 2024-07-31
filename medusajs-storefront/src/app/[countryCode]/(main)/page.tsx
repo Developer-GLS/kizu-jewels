@@ -88,7 +88,7 @@ export default async function Home({
         className="lg:mb-48 mx-12 py-12"
         fatText={fatTextValue}
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text text-ui-fg-base"
+        fatTextCss="leading-relaxed fat-text text-ui-fg-base border-palette-2 border-b-4"
         paragraph={longFirstPat}
         paragraphWrapperCss="lg:w-2/5 mb-12"
         paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"

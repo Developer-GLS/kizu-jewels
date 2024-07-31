@@ -39,7 +39,7 @@ const ctaPar = "Whether you're drawn to bold, avant-garde designs or subtle, min
 
 const AboutTemplate = ({}) => {
   return (
-    <div className="bg-white dark:bg-stone-900 pb-48">
+    <div className="bg-white dark:bg-stone-900 lg:pb-48">
       <Hero
         className="mb-12"
         title="About us"
@@ -49,23 +49,23 @@ const AboutTemplate = ({}) => {
       />
 
       <TypoParagraphBlock
-        className="lg:mb-48 mx-12 py-12"
+        className="lg:mb-48 mx-12 pb-12"
         fatText="Our vision"
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text text-ui-fg-base"
+        fatTextCss="leading-relaxed fat-text text-ui-fg-base border-b-4"
         paragraph={visionPar}
-        paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
+        paragraphWrapperCss="lg:w-2/5 mb-12 mt-4 lg:mt-0"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base mt-4 lg:mt-0"
       ></TypoParagraphBlock>
 
       <TypoParagraphBlock
-        className="lg:mb-48 mx-12 py-12"
+        className="lg:mb-48 mx-12 pb-12"
         fatText="Inclusive Jewlery"
         fatTextPosition="dx"
-        fatTextCss="leading-relaxed fat-text text-ui-fg-base"
+        fatTextCss="leading-relaxed fat-text text-ui-fg-base border-b-8 border-palette-2"
         paragraph={inclusionPar}
-        paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
+        paragraphWrapperCss="lg:w-2/5 mb-12 mt-4 lg:mt-0"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base mt-4 lg:mt-0"
       ></TypoParagraphBlock>
 
       <ImageParagraphBlock
@@ -85,14 +85,15 @@ const AboutTemplate = ({}) => {
         className="lg:mb-48 mx-12 py-12"
         fatText="Respect our planet"
         fatTextPosition="sx"
-        fatTextCss="leading-relaxed fat-text text-ui-fg-base"
+        fatTextCss="leading-relaxed fat-text text-ui-fg-base border-b-4"
         paragraph={sustainibilityPar}
-        paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
+        paragraphWrapperCss="lg:w-2/5 mb-12 mt-4 lg:mt-0"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base mt-4 lg:mt-0"
       ></TypoParagraphBlock>
 
       <CTABlock
-        className="min-h-[800px] lg:mx-12 my-8 bg-bottom"
+        className="min-h-[800px] lg:mx-12 lg:my-8 bg-bottom"
+        wrapperCss=""
         direction="dx"
         title="Explore our products"
         titleSize="h3"
