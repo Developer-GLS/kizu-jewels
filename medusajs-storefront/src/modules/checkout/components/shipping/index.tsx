@@ -107,7 +107,7 @@ const Shipping: React.FC<ShippingProps> = ({
                       key={option.id}
                       value={option.id}
                       className={clx(
-                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border border-stone-500 dark:border-stone-500 rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border border-stone-500 dark:border-stone-500 rounded-none px-8 mb-2 hover:shadow-borders-interactive-with-active",
                         {
                           "border-stone-500 dark:border-stone-200":
                             option.id ===
@@ -146,7 +146,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 rounded-none"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods[0]}

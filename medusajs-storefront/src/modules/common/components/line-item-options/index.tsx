@@ -1,12 +1,20 @@
 import { ProductVariant } from "@medusajs/medusa"
-import { Text } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui"
 
-type LineItemOptionsProps = { variant: ProductVariant }
+type LineItemOptionsProps = { variant: ProductVariant, darkModeOverride?: boolean }
 
-const LineItemOptions = ({ variant }: LineItemOptionsProps) => {
+const LineItemOptions = ({ variant, darkModeOverride }: LineItemOptionsProps) => {
   return (
-    <Text className="inline-block text-medium text-sm text-stone-900 w-full overflow-hidden text-ellipsis">
+
+    <Text className={clx(
+      "inline-block text-medium text-sm w-full overflow-hidden text-ellipsis",
+      {
+        "text-ui-fg-base": !darkModeOverride,
+        "text-stone-900": darkModeOverride,
+      
+      })}>
       Variant: {variant.title}
+      
     </Text>
   )
 }

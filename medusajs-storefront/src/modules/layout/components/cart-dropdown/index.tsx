@@ -123,14 +123,14 @@ const CartDropdown = ({
                           <div className="flex flex-col flex-1">
                             <div className="flex items-start justify-between">
                               <div className="flex flex-col overflow-ellipsis whitespace-nowrap mr-4 w-[180px]">
-                                <h3 className="text-stone-900 overflow-hidden text-ellipsis">
+                                <h3 className="text-stone-900 overflow-hidden text-ellipsis font-now text-lg">
                                   <LocalizedClientLink
                                     href={`/products/${item.variant.product.handle}`}
                                   >
                                     {item.title}
                                   </LocalizedClientLink>
                                 </h3>
-                                <LineItemOptions variant={item.variant} />
+                                <LineItemOptions variant={item.variant} darkModeOverride={true}/>
                                 <span className="text-stone-900">Quantity: {item.quantity}</span>
                               </div>
                               <div className="flex justify-end">

@@ -27,7 +27,7 @@ const StoreTemplate = ({
       </div>
       <div className="w-full hidden lg:block">
         <div className="mb-8 text-2xl-semi">
-          <h1 className="text-ui-fg-base">All products</h1>
+          <h1 className="text-ui-fg-base font-tostada">All products</h1>
         </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts

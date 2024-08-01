@@ -140,6 +140,7 @@ const Payment = ({
                 .map((paymentSession) => {
                   return (
                     <PaymentContainer
+                    
                       paymentInfoMap={paymentInfoMap}
                       paymentSession={paymentSession}
                       key={paymentSession.id}
@@ -175,7 +176,7 @@ const Payment = ({
 
             <Button
               size="large"
-              className="mt-6"
+              className="mt-6 rounded-none"
               onClick={handleSubmit}
               isLoading={isLoading}
               disabled={(isStripe && !cardComplete) || !cart.payment_session}

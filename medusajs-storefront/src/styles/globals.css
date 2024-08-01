@@ -203,12 +203,25 @@ body.dark .border-ui-border-base {
 }
 
 .bg-ui-bg-subtle {
-  @apply bg-stone-100
+  @apply bg-stone-100;
 }
 
 body.dark .bg-ui-bg-subtle {
-  @apply bg-stone-900
+  @apply bg-stone-900;
 }
+
+.product-option-label {
+  @apply text-stone-900;
+}
+
+body.dark .product-option-label {
+ @apply text-stone-100
+}
+
+body.dark #headlessui-portal-root .product-option-label {
+  @apply text-stone-900;
+}
+
 
 .rounded-lg {
   border-radius: 0 !important;

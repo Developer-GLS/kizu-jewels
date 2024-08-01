@@ -93,7 +93,7 @@ const Addresses = ({
                 <BillingAddress cart={cart} countryCode={countryCode} />
               </div>
             )}
-            <SubmitButton className="mt-6">Continue to delivery</SubmitButton>
+            <SubmitButton className="mt-6 rounded-none">Continue to delivery</SubmitButton>
             <ErrorMessage error={message} />
           </div>
         </form>

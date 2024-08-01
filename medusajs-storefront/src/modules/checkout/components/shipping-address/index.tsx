@@ -133,6 +133,7 @@ const ShippingAddress = ({
           required
         />
         <CountrySelect
+          className="rounded-none"
           name="shipping_address.country_code"
           autoComplete="country"
           region={cart?.region}

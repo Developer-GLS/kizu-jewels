@@ -17,7 +17,7 @@ const ItemsTemplate = ({ items, region }: ItemsTemplateProps) => {
       </div>
       <Table>
         <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus bg-fg">
+          <Table.Row className="text-ui-fg-subtle txt-medium-plus bg-fg pointer-events-none">
             <Table.HeaderCell className="!pl-0 text-ui-fg-base font-now">Item</Table.HeaderCell>
             <Table.HeaderCell className="text-ui-fg-base font-now"></Table.HeaderCell>
             <Table.HeaderCell className="text-ui-fg-base font-now">Quantity</Table.HeaderCell>

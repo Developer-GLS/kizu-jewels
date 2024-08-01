@@ -7,7 +7,7 @@ const GlsIcons = () => {
   return (
     <Text className="flex gap-x-2 txt-compact-small-plus items-center text-stone-400 txt-small">
       Powered by
-      <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
+      <a href="https://greenleafstudio.it" target="_blank" rel="noreferrer">
         <Gls fill="#A0A5A7" className="fill-[#A0A5A7]" />
       </a>
       &
