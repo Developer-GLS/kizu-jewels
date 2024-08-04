@@ -56,7 +56,7 @@ const AddAddress = ({ region }: { region: Region }) => {
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="flex flex-col gap-y-2 mt-8">
+            <div className="flex flex-col gap-y-2 mt-8 w-full">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
                   label="First name"
@@ -108,7 +108,7 @@ const AddAddress = ({ region }: { region: Region }) => {
               />
               <CountrySelect
                 region={region}
-                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium"
+                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium shadow-sm shadow-stone-200 focus:shadow-palette-2/40"
                 name="country_code"
                 required
                 autoComplete="country"

@@ -15,14 +15,14 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
 
   return (
     <div>
-      <Text>
+      <Text className="text-ui-fg-base">
         We have sent the order confirmation details to{" "}
         <span className="text-ui-fg-medium-plus font-semibold">
           {order.email}
         </span>
         .
       </Text>
-      <Text className="mt-2">
+      <Text className="mt-2 text-ui-fg-base">
         Order date: {new Date(order.created_at).toDateString()}
       </Text>
       <Text className="mt-2 text-ui-fg-interactive">
@@ -34,13 +34,13 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
           <>
             <Text>
               Order status:{" "}
-              <span className="text-ui-fg-subtle ">
+              <span className="text-ui-fg-subtle text-ui-fg-base">
                 {formatStatus(order.fulfillment_status)}
               </span>
             </Text>
             <Text>
               Payment status:{" "}
-              <span className="text-ui-fg-subtle ">
+              <span className="text-ui-fg-subtle text-ui-fg-base">
                 {formatStatus(order.payment_status)}
               </span>
             </Text>

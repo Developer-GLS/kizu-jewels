@@ -104,8 +104,8 @@ const AccountNav = ({
       </div>
       <div className="hidden small:block">
         <div>
-          <div className="pb-4">
-            <h3 className="text-ui-fg-base text-4xl font-now">Account</h3>
+          <div className="pb-8">
+            <h3 className="text-ui-fg-base text-4xl font-tostada">Account</h3>
           </div>
           <div className="text-base-regular">
             <ul className="flex mb-0 justify-start items-start flex-col gap-y-4">
@@ -129,8 +129,8 @@ const AccountNav = ({
                   Orders
                 </AccountNavLink>
               </li>
-              <li className="text-grey-700">
-                <button type="button" onClick={handleLogout} className="text-ui-fg-base">
+              <li className="text-ui-fg-subtle">
+                <button type="button" onClick={handleLogout} className="text-ui-fg-subtle">
                   Log out
                 </button>
               </li>

@@ -160,6 +160,20 @@
   border-color: var(--palette-2) !important;
 }
 
+.palette-1-outline-focus:focus
+{
+  border-color: var(--palette-1);
+  box-shadow: 0 0 0 2px var(--palette-1) !important;
+}
+
+.rounded-none.shadow-buttons-inverted:focus,
+.rounded-none.shadow-buttons-neutral:focus
+{
+  border-color: var(--palette-1);
+  box-shadow: 0 0 0 2px var(--palette-1) !important;
+}
+
+
 .text-ui-fg-base {
   @apply text-stone-900;
 }
@@ -221,7 +235,6 @@ body.dark .product-option-label {
 body.dark #headlessui-portal-root .product-option-label {
   @apply text-stone-900;
 }
-
 
 .rounded-lg {
   border-radius: 0 !important;
@@ -324,6 +337,10 @@ body.dark .mobile-store {
   filter: saturate(20) contrast(5) grayscale(.99) brightness(.9);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+body.dark .order-confirmed-details tr {
+  @apply bg-stone-900
 }
 
 .bg-ui-bg-field {

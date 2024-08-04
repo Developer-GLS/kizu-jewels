@@ -19,13 +19,14 @@ const CartTemplate = ({
         {cart?.items.length ? (
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
             <div className="flex flex-col bg-white dark:bg-stone-900 p-6 gap-y-6">
+            <ItemsTemplate region={cart?.region} items={cart?.items} />
               {!customer && (
                 <>
-                  <SignInPrompt />
                   <Divider />
+                  <SignInPrompt />
                 </>
               )}
-              <ItemsTemplate region={cart?.region} items={cart?.items} />
+            
             </div>
             <div className="relative">
               <div className="flex flex-col gap-y-8 sticky top-12">

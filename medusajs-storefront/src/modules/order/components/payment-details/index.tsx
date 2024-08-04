@@ -13,7 +13,7 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
   const payment = order.payments[0]
   return (
     <div>
-      <Heading level="h2" className="flex flex-row text-3xl-regular my-6">
+      <Heading level="h2" className="flex flex-row text-ui-fg-base text-4xl my-6">
         Payment
       </Heading>
       <div>

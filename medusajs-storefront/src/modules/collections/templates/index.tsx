@@ -37,7 +37,7 @@ export default function CollectionTemplate({
               Explore our products
             </InteractiveLink>
           </div>
-          <div className="mb-2 lg:mb-8 text-2xl-semi font-tostada">
+          <div className="text-2xl-semi font-tostada mb-8">
             <h1 className="text-ui-fg-base border-b-4 border-palette-1">{collection.title}</h1>
           </div>
           <div className="block lg:hidden">

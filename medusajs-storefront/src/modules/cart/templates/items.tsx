@@ -17,14 +17,13 @@ const ItemsTemplate = ({ items, region }: ItemsTemplateProps) => {
       </div>
       <Table>
         <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus bg-fg pointer-events-none">
-            <Table.HeaderCell className="!pl-0 text-ui-fg-base font-now">Item</Table.HeaderCell>
-            <Table.HeaderCell className="text-ui-fg-base font-now"></Table.HeaderCell>
-            <Table.HeaderCell className="text-ui-fg-base font-now">Quantity</Table.HeaderCell>
-            <Table.HeaderCell className="hidden small:table-cell text-ui-fg-base font-now">
+          <Table.Row className="text-ui-fg-subtle txt-medium-plus bg-fg pointer-events-none border-b-2 border-stone-200">
+            <Table.HeaderCell className="!px-0 text-ui-fg-base font-now">Item</Table.HeaderCell>
+            <Table.HeaderCell className="text-ui-fg-base font-now text-end">Quantity</Table.HeaderCell>
+            <Table.HeaderCell className="hidden small:table-cell text-ui-fg-base font-now text-end">
               Price
             </Table.HeaderCell>
-            <Table.HeaderCell className="!pr-0 text-right text-ui-fg-base font-now">
+            <Table.HeaderCell className="!pr-0 text-ui-fg-base font-now text-end">
               Total
             </Table.HeaderCell>
           </Table.Row>

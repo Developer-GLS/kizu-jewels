@@ -1,4 +1,4 @@
-import { Funnel } from "@medusajs/icons"
+import { ArrowUpDown } from "@medusajs/icons"
 import { DropdownMenu, IconButton } from "@medusajs/ui"
 import React from "react"
 
@@ -23,8 +23,8 @@ const MobSortProducts = ({ sortBy, setQueryParams }: SortProductsProps) => {
     <div className="flex flex-col items-center gap-y-2">
       <DropdownMenu>
         <DropdownMenu.Trigger asChild>
-          <IconButton size="large">
-            <Funnel />
+          <IconButton size="base" className="rounded-none focus:shadow-palette-1">
+            <ArrowUpDown />
           </IconButton>
         </DropdownMenu.Trigger>
         <DropdownMenu.Content className="w-[300px]">
@@ -32,6 +32,7 @@ const MobSortProducts = ({ sortBy, setQueryParams }: SortProductsProps) => {
             value={sort}
             onValueChange={(v) => handleChange(v as SortOptions)}
           >
+            <p className="text-center uppercase text-medium-semi">Sort</p>
             <DropdownMenu.Separator />
             <DropdownMenu.RadioItem value="price_desc">
              Highter price first

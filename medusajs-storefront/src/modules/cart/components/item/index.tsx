@@ -46,28 +46,34 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
   }
 
   return (
-    <Table.Row className="w-full bg-white dark:bg-stone-900">
-      <Table.Cell className="!pl-0 p-4 w-24">
+    <Table.Row className="w-full bg-white dark:bg-stone-900 hover:bg-inherit pt-8 border-transparent">
+      <Table.Cell className="!px-0 py-4 w-48">
         <LocalizedClientLink
           href={`/products/${handle}`}
-          className={clx("flex", {
-            "w-16": type === "preview",
-            "small:w-24 w-12": type === "full",
+          className={clx("flex flex-col", {
+            "w-24": type === "preview",
+            "": type === "full",
           })}
         >
           <Thumbnail thumbnail={item.thumbnail} size="square" />
+          <div className={clx("py-2", {
+            "hidden": type === "preview"
+          })}>
+            <Text className="text-ui-fg-base font-medium font-now text-md">{item.title}</Text>
+            <LineItemOptions variant={item.variant} />
+          </div>
         </LocalizedClientLink>
+
+
+
       </Table.Cell>
 
-      <Table.Cell className="text-left">
-        <Text className="text-lg text-ui-fg-base">{item.title}</Text>
-        <LineItemOptions variant={item.variant} />
-      </Table.Cell>
+
 
       {type === "full" && (
         <Table.Cell>
-          <div className="flex gap-2 items-center w-28">
-            <DeleteButton id={item.id} cartPage={true}/>
+          <div className="flex gap-2 items-center justify-end">
+            <DeleteButton id={item.id} cartPage={true} />
             <CartItemSelect
               value={item.quantity}
               onChange={(value) => changeQuantity(parseInt(value.target.value))}
@@ -97,14 +103,14 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
 
       {type === "full" && (
         <Table.Cell className="hidden small:table-cell">
-          <LineItemUnitPrice item={item} region={region} style="tight" />
+          <LineItemUnitPrice item={item} region={region} style="tight" textAlign="dx" />
         </Table.Cell>
       )}
 
       <Table.Cell className="!pr-0">
         <span
           className={clx("!pr-0", {
-            "flex flex-col items-end h-full justify-center": type === "preview",
+            "flex flex-col items-end h-full justify-end pb-4": type === "preview",
           })}
         >
           {type === "preview" && (
@@ -113,7 +119,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
               <LineItemUnitPrice item={item} region={region} style="tight" />
             </span>
           )}
-          <LineItemPrice item={item} region={region} style="tight" cartPage={true}/>
+          <LineItemPrice item={item} region={region} style="tight" cartPage={true} />
         </span>
       </Table.Cell>
     </Table.Row>

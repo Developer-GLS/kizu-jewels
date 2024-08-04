@@ -119,7 +119,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="grid grid-cols-1 gap-y-2 mt-8">
+            <div className="grid grid-cols-1 gap-y-2 mt-8 w-full">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
                   label="First name"
@@ -180,7 +180,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <CountrySelect
                 name="country_code"
                 region={region}     
-                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium"
+                className="bg-white w-full rounded-none text-ui-fg-subtle txt-compact-medium shadow-sm shadow-stone-200 focus:shadow-palette-2/40"
                 required
                 autoComplete="country"
                 defaultValue={address.country_code || undefined}
@@ -204,11 +204,13 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 type="reset"
                 variant="secondary"
                 onClick={close}
-                className="h-10"
+                className="h-10 rounded-none"
               >
                 Cancel
               </Button>
-              <SubmitButton>Save</SubmitButton>
+              <SubmitButton
+              className="rounded-none"
+              >Save</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

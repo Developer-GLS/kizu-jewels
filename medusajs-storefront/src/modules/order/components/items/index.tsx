@@ -12,7 +12,7 @@ type ItemsProps = {
 
 const Items = ({ items, region }: ItemsProps) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col order-confirmed-details">
       <Divider className="!mb-0" />
       <Table>
         <Table.Body>

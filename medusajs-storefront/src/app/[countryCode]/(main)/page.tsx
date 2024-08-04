@@ -91,7 +91,7 @@ export default async function Home({
         fatTextCss="leading-relaxed fat-text text-ui-fg-base border-palette-2 border-b-4"
         paragraph={longFirstPat}
         paragraphWrapperCss="lg:w-2/5 mb-12"
-        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base"
+        paragraphCss="text-lg font-now text-justify md:text-start text-ui-fg-base mt-16 lg:mt-0"
       ></TypoParagraphBlock>
 
       <div className="py-12">

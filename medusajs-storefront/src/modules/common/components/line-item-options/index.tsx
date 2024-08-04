@@ -7,7 +7,7 @@ const LineItemOptions = ({ variant, darkModeOverride }: LineItemOptionsProps) =>
   return (
 
     <Text className={clx(
-      "inline-block text-medium text-sm w-full overflow-hidden text-ellipsis",
+      "inline-block text-medium text-xs w-full overflow-hidden text-ellipsis",
       {
         "text-ui-fg-base": !darkModeOverride,
         "text-stone-900": darkModeOverride,

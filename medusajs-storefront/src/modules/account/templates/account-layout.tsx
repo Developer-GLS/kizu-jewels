@@ -15,11 +15,11 @@ const AccountLayout: React.FC<AccountLayoutProps> = ({
   children,
 }) => {
   return (
-    <div className="flex-1 small:py-12 h-[90dvh]">
-      <div className="mx-auto bg-white dark:bg-stone-900 flex flex-col px-12">
+    <div className="flex-1 small:py-12 mb-64">
+      <div className="mx-auto bg-white dark:bg-stone-900 flex flex-col px-8">
         <div
              className={clx("grid py-12 lg:justify-center h-full", {
-               "lg:grid-cols-2": customer,
+               "lg:grid-cols-2 lg:px-16": customer,
                "grid-cols-1": !customer,
              })}
         >

@@ -33,7 +33,9 @@ module.exports = {
           70: "#374151",
           80: "#1F2937",
           90: "#111827",
-        }
+        },
+        'palette-1': '#c8975f',
+        'palette-2': '#ff9a47'
       },
       borderRadius: {
         none: "0px",

@@ -9,12 +9,14 @@ type LineItemUnitPriceProps = {
   item: Omit<LineItem, "beforeInsert">
   region: Region
   style?: "default" | "tight"
+  textAlign?: "sx" | "dx"
 }
 
 const LineItemUnitPrice = ({
   item,
   region,
   style = "default",
+  textAlign = "sx"
 }: LineItemUnitPriceProps) => {
   const originalPrice = (item.variant as CalculatedVariant).original_price
   const hasReducedPrice = (originalPrice * item.quantity || 0) > item.total!
@@ -22,6 +24,7 @@ const LineItemUnitPrice = ({
 
   return (
     <div className="flex flex-col text-ui-fg-muted justify-center h-full">
+
       {hasReducedPrice && (
         <>
           <p>
@@ -46,6 +49,8 @@ const LineItemUnitPrice = ({
       <span
         className={clx("text-base-regular", {
           "text-ui-fg-interactive": hasReducedPrice,
+          'text-start': textAlign == 'sx',
+          'text-end': textAlign == 'dx'
         })}
       >
         {formatAmount({
